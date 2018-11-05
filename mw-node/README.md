@@ -130,5 +130,18 @@ JIRA密码：Ss152...
 
 
 
+## 2018/10/15
+
+#### 增加分区
+
+```
+alter table my_partition_test_table if not exists add partition (p_hour='2017113003', p_city='573', p_loctype='MHA');
+```
 
 
+
+#### 删除分区
+
+```
+ALTER TABLE my_partition_test_table DROP IF EXISTS PARTITION (p_loctype='MHA');
+```
